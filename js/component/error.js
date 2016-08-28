@@ -3,17 +3,17 @@
  */
 import React, {Component} from 'react';
 
-class repos extends Component {
+class error extends Component {
 
 
     render() {
 
         return (
             <div>
-                <h2>{this.props.params.repoName}</h2>
+                Can't find the page
             </div>
         )
     };
 }
 
-export default repos;
+export default error;

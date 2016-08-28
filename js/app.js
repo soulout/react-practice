@@ -5,11 +5,13 @@ import React from 'react';
 
 import TodoList from './component/todoList'
 
-import Repos from './component/repos'
+import Picture from './component/picture'
 
 import About from './component/about'
 
 import Home from './component/home'
+
+import Error from './component/error'
 
 
 
@@ -18,18 +20,16 @@ import  {render} from 'react-dom';
 
 import style from '../scss/style.scss'
 
-import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 render(
-    <Router history={hashHistory}>
-        <Route path="/" component={TodoList}>
-            <IndexRoute component={Home}/>
-            <Route path="/repos/:userName/:repoName" component={Repos}/>
+    <Router history={browserHistory} >
+        <Route path="/" component={Home}>
+            <IndexRoute component={Error}/>
+            <Route path="/picture/:pictureId" component={Picture}/>
             <Route path="/about" component={About}/>
+            <Route path="/todo-list" component={TodoList}/>
         </Route>
     </Router>,
     document.getElementById('App')
 );
-console.time("dom");
-document.getElementsByName("s_form_wrapper soutu-env-mac soutu-env-index");
-console.timeEnd("dom");

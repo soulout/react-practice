@@ -10,7 +10,7 @@ class about extends Component {
 
         return (
             <div>
-                about
+                This is for react and react-router practice
             </div>
         )
     };

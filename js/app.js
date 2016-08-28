@@ -26,10 +26,10 @@ render(
     <Router history={browserHistory} >
         <Route path="/" component={Home}>
             <IndexRoute component={Error}/>
-            <Route path="/picture/:pictureId" component={Picture}/>
+            <Route path="/picture/(:pictureId)" component={Picture}/>
             <Route path="/about" component={About}/>
             <Route path="/todo-list" component={TodoList}/>
         </Route>
     </Router>,
-    document.getElementById('App')
+    document.getElementById('Appd')
 );

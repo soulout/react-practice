@@ -13,8 +13,12 @@ class picture extends Component {
     render() {
 
         return (
+        this.props.params.pictureId?
             <div>
                 <h2>{this.props.params.pictureId}</h2>
+            </div> :
+            <div>
+                input id please
             </div>
         )
     };

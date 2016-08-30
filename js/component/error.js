@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 
-class error extends Component {
+class Error extends Component {
 
 
     render() {
@@ -16,4 +16,4 @@ class error extends Component {
     };
 }
 
-export default error;
+export default Error;

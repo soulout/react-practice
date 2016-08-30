@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 
-class about extends Component {
+class About extends Component {
 
 
     render() {
@@ -16,4 +16,4 @@ class about extends Component {
     };
 }
 
-export default about;
+export default About;

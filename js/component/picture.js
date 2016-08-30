@@ -2,25 +2,44 @@
  * Created by xtong on 16/7/7.
  */
 import React, {Component} from 'react';
+import pictureData from '../data/pictures'
 
-class picture extends Component {
-
-    componentDidMount(){
-        //根据查询条件发送图片查询请求
-    }
-
-
-    render() {
-
-        return (
-        this.props.params.pictureId?
+const ShowPicture =(id)=>{
+    let imageData = pictureData.filter((item)=>item.id == id);
+    return (
+        imageData.length ?
             <div>
-                <h2>{this.props.params.pictureId}</h2>
+                <h2>{imageData[0].caption}</h2>
+                <img src={imageData[0].display_src}/>
             </div> :
             <div>
-                input id please
+                can't find picture
             </div>
-        )
+    )
+};
+class picture extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pictureId:""
+        }
+    }
+
+    showPicture(){
+        this.setState({
+            pictureId:this.refs.inputId.value
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <input placeholder="Put picture Id" type="text" ref="inputId"/>
+                <button onClick={this.showPicture.bind(this)}>showPicture</button>
+                {ShowPicture(this.state.pictureId)}
+            </div>
+
+        );
     };
 }
 

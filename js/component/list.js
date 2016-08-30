@@ -5,7 +5,7 @@ import  React, {Component} from 'react';
 import  ListItem from './listItem'
 
 
-class list extends Component {
+class List extends Component {
 
     checkedChange(item) {
         this.props.checkedChange(item);
@@ -39,4 +39,4 @@ class list extends Component {
     }
 }
 
-export default list;
+export default List;

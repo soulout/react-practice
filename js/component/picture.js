@@ -37,6 +37,7 @@ class picture extends Component {
                 <input placeholder="Put picture Id" type="text" ref="inputId"/>
                 <button onClick={this.showPicture.bind(this)}>showPicture</button>
                 {ShowPicture(this.state.pictureId)}
+                <h2>{this.props.params.pictureId}</h2>
             </div>
         );
     };

@@ -38,7 +38,6 @@ class picture extends Component {
                 <button onClick={this.showPicture.bind(this)}>showPicture</button>
                 {ShowPicture(this.state.pictureId)}
             </div>
-
         );
     };
 }

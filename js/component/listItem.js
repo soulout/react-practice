@@ -20,7 +20,7 @@ class ListItem extends Component {
                     {this.props.data.name}
                 </div>
                 <div className="item-close">
-                    <span  className="iconfont icon-guanbi111"   onClick={this.delTodo.bind(this)}></span>
+                    <span  className="iconfont icon-guanbi11122"   onClick={this.delTodo.bind(this)}></span>
                 </div>
             </div>
         );

@@ -19,7 +19,7 @@ class ListItem extends Component {
                 <div className="over-flow , list-item" >
                     {this.props.data.name}
                 </div>
-                <div className="item-close ">
+                <div className="item-close">
                     <span  className="iconfont icon-guanbi "   onClick={this.delTodo.bind(this)}></span>
                 </div>
             </div>

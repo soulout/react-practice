@@ -10,7 +10,7 @@ class Home extends Component {
     render() {
 
         return (
-            <div className = 'practice'>
+            <div className='practice'>
                 <ul role="nav">
                     <li><NavLink to={`/picture`}>Picture</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>

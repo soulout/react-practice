@@ -25,11 +25,11 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 render(
     <Router history={browserHistory} >
         <Route path="/" component={Home}>
-            <IndexRoute component={Error}/>
             <Route path="/picture(/:name)" component={Picture}/>
             <Route path="/about" component={About}/>
             <Route path="/todo-list" component={TodoList}/>
         </Route>
+        <Route path='*' component={Error} />
     </Router>,
     document.getElementById('App')
 );

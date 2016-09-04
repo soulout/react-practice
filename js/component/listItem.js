@@ -16,11 +16,11 @@ class ListItem extends Component {
         return (
             <div className="item">
                 <input type="checkbox" checked={this.props.data.checked} onChange={this.checkedChange.bind(this)}/>
-                <div className="over-flow , list-item" >
+                <div className="over-flow , list-item">
                     {this.props.data.name}
                 </div>
                 <div className="item-close">
-                    <span  className="iconfont icon-guanbi"   onClick={this.delTodo.bind(this)}></span>
+                    <span className="iconfont icon-guanbi" onClick={this.delTodo.bind(this)}></span>
                 </div>
             </div>
         );

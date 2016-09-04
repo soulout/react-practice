@@ -21,7 +21,7 @@ class picture extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pictureId:""
+            pictureId:props.params.name
         }
     }
 

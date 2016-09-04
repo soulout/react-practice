@@ -26,7 +26,7 @@ render(
     <Router history={browserHistory} >
         <Route path="/" component={Home}>
             <IndexRoute component={Error}/>
-            <Route path="/picture" component={Picture}/>
+            <Route path="/picture(/:name)" component={Picture}/>
             <Route path="/about" component={About}/>
             <Route path="/todo-list" component={TodoList}/>
         </Route>

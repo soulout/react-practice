@@ -2,7 +2,7 @@
  * Created by xtong on 16/7/14.
  */
 import React from 'react'
-import {Link} from 'react-router'
+import { Link } from 'react-router'
 
 export default React.createClass({
     render() {

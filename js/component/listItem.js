@@ -5,7 +5,7 @@ import  React, {Component} from 'react';
 
 class ListItem extends Component {
     checkedChange() {
-        this.props.checkedChange(this.props.data);
+        this.props.checkedChange(this.props.mark);
     }
 
     delTodo() {

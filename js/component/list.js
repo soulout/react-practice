@@ -7,8 +7,8 @@ import  ListItem from './listItem'
 
 class List extends Component {
 
-    checkedChange(item) {
-        this.props.checkedChange(item);
+    checkedChange(key) {
+        this.props.checkedChange(key);
     }
 
     delTodo(key) {
@@ -20,8 +20,8 @@ class List extends Component {
             return (
                 <div className='text-style'>
                     {this.props.data.map((item, i) =>
-                        <ListItem key={i} data={item} checkedChange={this.checkedChange.bind(this)}
-                                  delTodo={this.delTodo.bind(this)} mark={i}/>
+                        <ListItem key={i} data={item} checkedChange={this.checkedChange.bind(this)} mark={i}
+                                  delTodo={this.delTodo.bind(this)} />
                     )}
                 </div>
             )

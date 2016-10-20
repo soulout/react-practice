@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  todo-list:
+    image: todo-list
+    build: .
+    ports:
+    - "7770:80"
+    volumes:
+    - .:/usr/src/app
+    depends_on:
+    - node
+  node:
+    image: node:6.7.0

@@ -21,7 +21,7 @@ class List extends Component {
                 <div className='text-style'>
                     {this.props.data.map((item, i) =>
                         <ListItem key={i} data={item} checkedChange={this.checkedChange.bind(this)} mark={i}
-                                  delTodo={this.delTodo.bind(this)} />
+                                  delTodo={this.delTodo.bind(this)}/>
                     )}
                 </div>
             )

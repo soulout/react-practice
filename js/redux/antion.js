@@ -19,7 +19,7 @@ export function inputChange(text) {
 }
 
 export function changeStatus(key) {
-    return{
+    return {
         type: 'CHANGE_STATUS',
         key
     }

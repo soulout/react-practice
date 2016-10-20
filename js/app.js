@@ -13,7 +13,7 @@ import Home from './component/home'
 
 import Error from './component/error'
 
-import { Provider } from  'react-redux';
+import {Provider} from  'react-redux';
 
 import store from './redux/store';
 

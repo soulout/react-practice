@@ -1,8 +1,8 @@
-import { createStore } from 'redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 
 import reducer from './reducer'
 
-import { getArrayCookie } from '../tools/controlCookies';
+import {getArrayCookie} from '../tools/controlCookies';
 
 let list = getArrayCookie('todoList');
 if (!list) {
@@ -16,9 +16,18 @@ const defaultStore = {
     text
 };
 
-const store = createStore(reducer, defaultStore,
-    window.devToolsExtension && window.devToolsExtension()
-);
+const logger = (store) => (next) => (action) => {
+    console.log("action type : " + action.type);
+    next(action);
+};
+
+const middleware = applyMiddleware(logger);
+
+
+const store = createStore(reducer, defaultStore, compose(
+    middleware,
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+));
 
 export  default store;
 

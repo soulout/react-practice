@@ -3,7 +3,8 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: [
-        './js/app.js'
+        './js/app.js',
+        // './test.js'
     ],
     output: {
         path: path.join(__dirname, 'dist'),
